@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="containerprinc">
+        <img src="/assets/logo.png" class="imglogo" />
+      </div>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+Detalhes do Pedido<br><br><br>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Número do Pedido:</ion-label>
+      <ion-text>{{ numeroPedido }}</ion-text>
+    </ion-item>
+    <ion-item *ngFor="let item of itens">
+      <ion-label>Item:</ion-label>
+      <ion-text>{{ item.nome }}</ion-text>
+      <ion-label>Preço:</ion-label>
+      <ion-text>R$ {{ item.preco }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Forma de Pagamento:</ion-label>
+      <ion-text>{{ formaPagamento }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Total:</ion-label>
+      <ion-text>R$ {{ calcularTotal() }}</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <div class="navigation">
+    <ul>
+      <li class="list ">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="location"></ion-icon>
+          </span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="cart"></ion-icon>
+          </span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="bicycle"></ion-icon>
+          </span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="settings-outline"></ion-icon>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</ion-footer>
